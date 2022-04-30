@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<MoradorModel>
+@{
     ViewData["Title"] = "Listagem de moradores";
 }
 <div class="text-center">
@@ -22,51 +23,27 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>5555555</td>
-                <td>7777777</td>
-                <td>12 3665558</td>
-                <td>mdo@gmail.com</td>
-                <td>14-A</td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-primary" asp-controller="Morador" asp-action="Editar">Editar</a>
-                        <a role="button" class="btn btn-danger" asp-controller="Morador" asp-action="Apagar">Deletar</a>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>5555555</td>
-                <td>7777777</td>
-                <td>12 3665558</td>
-                <td>mdo@gmail.com</td>
-                <td>18-G</td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-primary"asp-controller="Morador" asp-action="Editar">Editar</a>
-                        <a role="button" class="btn btn-danger"asp-controller="Morador" asp-action="Apagar">Deletar</a>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>5555555</td>
-                <td>7777777</td>
-                <td>12 3665558</td>
-                <td>mdo@gmail.com</td>
-                <td>15-A</td>
-                <td>
-                    <div class="btn-group" role="group">
-                        <a role="button" class="btn btn-primary"asp-controller="Morador" asp-action="Editar">Editar</a>
-                        <a role="button" class="btn btn-danger"asp-controller="Morador" asp-action="Apagar">Deletar</a>
-                    </div>
-                </td>
-            </tr>
+            @if (Model != null && Model.Any())
+            {
+                foreach (MoradorModel morador in Model)
+                {
+                    <tr>
+                        <th scope="row">@morador.Id</th>
+                        <td>@morador.Id</td>
+                        <td>@morador.RG</td>
+                        <td>@morador.CPF</td>
+                        <td>@morador.Telefone</td>
+                        <td>@morador.Email</td>
+                        <td>@morador.Apartamento</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a role="button" class="btn btn-primary"asp-route-id="@morador.Id" asp-controller="Morador" asp-action="Editar">Editar</a>
+                                <a role="button" class="btn btn-danger"  asp-route-id="@morador.Id" asp-controller="Morador" asp-action="Apagar">Deletar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
         </tbody>
     </table>
 

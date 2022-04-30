@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GestãoCondomínio.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,12 @@ namespace GestãoCondomínio.Data
 {
     public class BancoContext : DbContext
     {
-        public BancoContext(DbContextOptions<BancoContext>options)
+        public BancoContext(DbContextOptions<BancoContext>options) : base(options)
         {
-
         }
+
+        public DbSet<MoradorModel> Moradores { get; set; }
+
 
     }
 }

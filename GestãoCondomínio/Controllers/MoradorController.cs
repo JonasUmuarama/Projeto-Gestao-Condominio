@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GestãoCondomínio.Models;
+using GestãoCondomínio.Repositorio;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,10 +9,15 @@ using System.Threading.Tasks;
 namespace GestãoCondomínio.Controllers
 {
     public class MoradorController : Controller
-    {
+    { private readonly IMoradorRepositorio _moradorRepositorio;
+        public MoradorController(IMoradorRepositorio moradorRepositorio)
+        {
+            _moradorRepositorio = moradorRepositorio;
+        }
         public IActionResult Index()
         {
-            return View();
+           List <MoradorModel> moradores = _moradorRepositorio.BuscarTodos();
+            return View(moradores);
         }
 
 
@@ -27,6 +34,13 @@ namespace GestãoCondomínio.Controllers
         public IActionResult Apagar()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Cadastrar(MoradorModel morador)
+        {
+            _moradorRepositorio.Adicionar(morador);
+            return RedirectToAction("Index");
         }
 
     }
