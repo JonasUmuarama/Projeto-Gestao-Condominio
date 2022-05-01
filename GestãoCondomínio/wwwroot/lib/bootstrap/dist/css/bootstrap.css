@@ -10040,3 +10040,12 @@ a.text-dark:hover, a.text-dark:focus {
 .field-valitation-error{
     color: #dc3545;
 }
+
+.close-alert {
+    position: absolute;
+    rigth: -10px;
+    top: -15px;
+    border-radius: 15px;
+    width: 30px;
+    height: 31px;
+}

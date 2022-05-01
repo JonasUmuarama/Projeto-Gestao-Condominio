@@ -47,12 +47,24 @@ namespace GestãoCondomínio.Controllers
         [HttpPost]
         public IActionResult Cadastrar(MoradorModel morador)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _moradorRepositorio.Adicionar(morador);
+                if (ModelState.IsValid)
+                {
+                    _moradorRepositorio.Adicionar(morador);
+                    TempData["MensagemSucesso"] = "Morador cadastrado com sucesso!";
+                    return RedirectToAction("Index");
+                }
+
+
+                return View(morador);
+            }
+            catch (Exception erro)
+            {
+
+                TempData["MensagemErro"] = $"Erro ao cadastrar, tente novamnete,detalhe do erro :{ erro.Message}";
                 return RedirectToAction("Index");
             }
-            return View(morador);
             
         }
 
