@@ -4,6 +4,12 @@
 // Write your JavaScript code.
 
 
+$(document).ready(function () {
+    $('#table-moradores').DataTable();
+});
+
+
+
 $('.close-alert').click(function () {
 
     $('.alert').hide('hide');
