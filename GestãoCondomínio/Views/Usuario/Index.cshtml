@@ -1,10 +1,10 @@
-﻿@model List<MoradorModel>
+﻿@model List<UsuarioModel>
 @{
-    ViewData["Title"] = "Listagem de moradores";
+    ViewData["Title"] = "Listagem de Usuários";
 }
 <div class="text-center">
     <div class="d-grid  gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Morador" asp-action="Cadastrar">Novo Morador</a>
+        <a class="btn btn-primary" role="button" asp-controller="Morador" asp-action="Cadastrar">Novo Usuário</a>
     </div>
     <br />
     @if (TempData["MensagemSucesso"] != null)
@@ -25,42 +25,40 @@
 
     <br />
 
-    <h1 class="display-4">Listagem de moradores</h1>
+    <h1 class="display-4">Listagem de usuarios</h1>
 
-    <table class="table" id="table-moradores">
+    <table class="table" id="table-usuarios">
         <thead>
             <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Nome</th>
-                <th scope="col">RG</th>
-                <th scope="col">CPF</th>
-                <th scope="col">Telefone</th>
                 <th scope="col">Email</th>
-                <th scope="col">Apartamento</th>
+                <th scope="col">Data de Cadastro</th>
                 <th scope="col"> </th>
             </tr>
         </thead>
         <tbody>
             @if (Model != null && Model.Any())
             {
-                foreach (MoradorModel morador in Model)
+                foreach (UsuarioModel usuario in Model)
                 {
                     <tr>
-                        <th scope="row">@morador.Id</th>
-                        <td>@morador.Nome</td>
-                        <td>@morador.RG</td>
-                        <td>@morador.CPF</td>
-                        <td>@morador.Telefone</td>
-                        <td>@morador.Email</td>
-                        <td>@morador.Apartamento</td>
+                        <th scope="row">@usuario.Id</th>
+                        <td>@usuario.Nome</td>
+                        <td>@usuario.Email</td>
+                        <td>@usuario.DataCadastro</td>
                         <td>
                             <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-primary" asp-route-id="@morador.Id" asp-controller="Morador" asp-action="Editar">Editar</a>
-                                <a role="button" class="btn btn-danger" asp-route-id="@morador.Id" asp-controller="Morador" asp-action="Apagar">Deletar</a>
+                                <a role="button" class="btn btn-primary" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Editar">Editar</a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Apagar">Deletar</a>
                             </div>
                         </td>
                     </tr>
                 }
+            }
+            else
+            {
+                <tr class="odd"><td valign="top" colspan="5"> Nenhum usuário encontrado</td></tr>
             }
         </tbody>
     </table>

@@ -14,7 +14,7 @@ namespace GestãoCondomínio.Data
         }
 
         public DbSet<MoradorModel> Moradores { get; set; }
-
+        public DbSet<UsuarioModel> Usuarios { get; set; }
 
     }
 }
