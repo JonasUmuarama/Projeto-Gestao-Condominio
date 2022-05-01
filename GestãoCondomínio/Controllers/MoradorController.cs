@@ -71,13 +71,24 @@ namespace GestãoCondomínio.Controllers
         [HttpPost]
         public IActionResult Editar(MoradorModel morador)
         {
-            if(ModelState.IsValid)
+            try
             {
-                _moradorRepositorio.Atualizar(morador);
+                if (ModelState.IsValid)
+                {
+                    _moradorRepositorio.Atualizar(morador);
+                    TempData["MensagemSucesso"] = "Morador alterado com sucesso!";
+                    return RedirectToAction("Index");
+                }
+
+                return View(morador);
+            }
+            catch (Exception erro)
+            {
+
+                TempData["MensagemErro"] = $"Erro ao atualizar, tente novamnete,detalhe do erro :{ erro.Message}";
                 return RedirectToAction("Index");
             }
-
-            return View(morador);
+           
         }
 
     }
