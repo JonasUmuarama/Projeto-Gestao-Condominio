@@ -1,4 +1,5 @@
-﻿@{
+﻿@model MoradorModel
+@{
     ViewData["Title"] = "Editar morador";
 }
 <div class="text-center">
@@ -7,34 +8,32 @@
 
 </div>
 
-<form>
+<form asp-controller="Morador" asp-action="Editar">
+    <input  type="hidden" asp-for="Id"/>
     <div class="form-group">
         <label for="nome">Nome</label>
-        <input type="text" class="form-control" placeholder="Digite o nome do morador">
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do morador">
     </div>
     <div class="form-group">
         <label for="Rg">RG</label>
-        <input type="text" class="form-control" placeholder="Digite o RG do morador">
+        <input type="text" asp-for="RG" class="form-control" placeholder="Digite o RG do morador">
     </div>
     <div class="form-group">
         <label for="cpf">CPF</label>
-        <input type="text" class="form-control" placeholder="Digite o CPF do morador">
+        <input type="text" asp-for="CPF" class="form-control" placeholder="Digite o CPF do morador">
     </div>
     <div class="form-group">
         <label for="telefone">Telefone</label>
-        <input type="text" class="form-control" placeholder="Digite o telefone do morador">
+        <input type="text" asp-for="Telefone" class="form-control" placeholder="Digite o telefone do morador">
     </div>
     <div class="form-group">
         <label for="email">E-mail</label>
-        <input type="email" class="form-control" placeholder="Digite o e-mail do morador">
+        <input type="email" asp-for="Email" class="form-control" placeholder="Digite o e-mail do morador">
     </div>
     <div class="form-group">
         <label for="apartamento">Apartamento</label>
-        <input type="text" class="form-control" placeholder="Digite o apartamento do morador">
+        <input type="text" asp-for="Apartamento" class="form-control" placeholder="Digite o apartamento do morador">
     </div>
-
-
-
 
     <button type="submit" class="btn btn-primary">Editar</button>
     <a class="btn btn-secondary" asp-controller="Morador" asp-action="Index" role="button">Voltar</a>

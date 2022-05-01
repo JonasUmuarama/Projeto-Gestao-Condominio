@@ -26,20 +26,35 @@ namespace GestãoCondomínio.Controllers
             return View();
         }
 
-        public IActionResult Editar()
+        public IActionResult Editar(int id)
         {
-            return View();
+           MoradorModel morador = _moradorRepositorio.ListarPorId(id);
+            return View(morador);
         }
 
-        public IActionResult Apagar()
+        public IActionResult Apagar(int id)
         {
-            return View();
+            MoradorModel morador = _moradorRepositorio.ListarPorId(id);
+            return View(morador);
+        }
+
+        public IActionResult Deletar(int id)
+        {
+            _moradorRepositorio.Deletar(id);
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
         public IActionResult Cadastrar(MoradorModel morador)
         {
             _moradorRepositorio.Adicionar(morador);
+            return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Editar(MoradorModel morador)
+        {
+            _moradorRepositorio.Atualizar(morador);
             return RedirectToAction("Index");
         }
 

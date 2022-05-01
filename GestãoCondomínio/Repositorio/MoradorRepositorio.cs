@@ -14,6 +14,13 @@ namespace GestãoCondomínio.Repositorio
         {
             _bancoContext = bancoContext;
         }
+
+        public MoradorModel ListarPorId(int id)
+        {
+            return _bancoContext.Moradores.FirstOrDefault(x => x.Id==id);
+
+        }
+
         //listar dados
         public List<MoradorModel> BuscarTodos()
         {
@@ -31,6 +38,30 @@ namespace GestãoCondomínio.Repositorio
 
         }
 
-        
+        public MoradorModel Atualizar(MoradorModel morador)
+        {
+            MoradorModel moradorDB = ListarPorId(morador.Id);
+            if (moradorDB == null) throw new Exception("Houve um erro na atualização do morador!");
+            moradorDB.Nome = morador.Nome;
+            moradorDB.RG = morador.RG;
+            moradorDB.CPF = morador.CPF;
+            moradorDB.Telefone = morador.Telefone;
+            moradorDB.Email = morador.Email;
+            moradorDB.Apartamento = morador.Apartamento;
+
+            _bancoContext.Moradores.Update(moradorDB);
+            _bancoContext.SaveChanges();
+
+            return moradorDB;
+        }
+
+        public bool Deletar(int id)
+        {
+            MoradorModel moradorDB = ListarPorId(id);
+            if (moradorDB == null) throw new Exception("Houve um erro na exclusão do morador!");
+            _bancoContext.Moradores.Remove(moradorDB);
+            _bancoContext.SaveChanges();
+            return true;
+        }
     }
 }
