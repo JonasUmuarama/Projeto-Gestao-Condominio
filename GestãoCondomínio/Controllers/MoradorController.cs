@@ -47,8 +47,13 @@ namespace GestãoCondomínio.Controllers
         [HttpPost]
         public IActionResult Cadastrar(MoradorModel morador)
         {
-            _moradorRepositorio.Adicionar(morador);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _moradorRepositorio.Adicionar(morador);
+                return RedirectToAction("Index");
+            }
+            return View(morador);
+            
         }
 
         [HttpPost]
