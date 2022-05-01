@@ -40,8 +40,24 @@ namespace GestãoCondomínio.Controllers
 
         public IActionResult Deletar(int id)
         {
-            _moradorRepositorio.Deletar(id);
-            return RedirectToAction("Index");
+            try
+            {
+               bool apagado = _moradorRepositorio.Deletar(id);
+                if (apagado)
+                {
+                    TempData["MensagemSucesso"] = "Morador excluído com sucesso!";
+                }
+                else
+                {
+                    TempData["MensagemErro"] = $"Erro ao excluir, tente novamente";
+                }
+                return RedirectToAction("Index");
+            }
+            catch (Exception erro)
+            {
+                TempData["MensagemErro"] = $"Erro ao excluir, tente novamente, mais detalhes: {erro.Message} ";
+                return RedirectToAction("Index");
+            }
         }
 
         [HttpPost]
