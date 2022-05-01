@@ -384,3 +384,4 @@ C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\bin\Debug
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Index.cshtml.g.cs
+C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Cadastrar.cshtml.g.cs
