@@ -1,4 +1,5 @@
-﻿using GestãoCondomínio.Models;
+﻿using ControleDeContatos.Models;
+using GestãoCondomínio.Models;
 using GestãoCondomínio.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -23,6 +24,12 @@ namespace GestãoCondomínio.Controllers
         public IActionResult Cadastrar()
         {
             return View();
+        }
+
+        public IActionResult Editar(int id)
+        {
+            UsuarioModel usuario = _usuarioRepositorio.ListarPorId(id);
+            return View(usuario);
         }
 
         public IActionResult Apagar(int id)
@@ -73,9 +80,39 @@ namespace GestãoCondomínio.Controllers
                 TempData["MensagemErro"] = $"Erro ao cadastrar, tente novamnete,detalhe do erro :{ erro.Message}";
                 return RedirectToAction("Index");
             }
-
         }
+
+        [HttpPost]
+        public IActionResult Editar(UsuarioSemSenhaModel usuarioSemSenhaModel)
+        {
+            try
+            {
+                UsuarioModel usuario = null;
+
+                if (ModelState.IsValid)
+                {
+                    usuario = new UsuarioModel()
+                    {
+                        Id = usuarioSemSenhaModel.Id,
+                        Nome = usuarioSemSenhaModel.Nome,
+                        Email = usuarioSemSenhaModel.Email,
+                        Perfil = usuarioSemSenhaModel.Perfil
+                    };
+
+                    usuario = _usuarioRepositorio.Atualizar(usuario);
+                    TempData["MensagemSucesso"] = "Usuário alterado com sucesso!";
+                    return RedirectToAction("Index");
+                }
+
+                return View(usuario);
+            }
+            catch (Exception erro)
+            {
+                TempData["MensagemErro"] = $"Erro, não conseguimos atualizar seu usuário, tente novamante, detalhe do erro: {erro.Message}";
+                return RedirectToAction("Index");
+            }
+        }
+
+
     }
-
-
 }

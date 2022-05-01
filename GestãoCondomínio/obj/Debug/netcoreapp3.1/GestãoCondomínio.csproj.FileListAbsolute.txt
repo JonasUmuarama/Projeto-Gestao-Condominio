@@ -386,3 +386,4 @@ C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\bin\Debug
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Index.cshtml.g.cs
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Cadastrar.cshtml.g.cs
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Apagar.cshtml.g.cs
+C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Editar.cshtml.g.cs
