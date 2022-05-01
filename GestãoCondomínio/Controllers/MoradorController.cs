@@ -59,8 +59,13 @@ namespace GestãoCondomínio.Controllers
         [HttpPost]
         public IActionResult Editar(MoradorModel morador)
         {
-            _moradorRepositorio.Atualizar(morador);
-            return RedirectToAction("Index");
+            if(ModelState.IsValid)
+            {
+                _moradorRepositorio.Atualizar(morador);
+                return RedirectToAction("Index");
+            }
+
+            return View(morador);
         }
 
     }
