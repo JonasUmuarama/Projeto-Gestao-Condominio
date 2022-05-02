@@ -65,7 +65,7 @@ namespace GestãoCondomínio
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Morador}/{action=Index}/{id?}");
+                    pattern: "{controller=Login}/{action=Index}/{id?}");
             });
         }
     }
