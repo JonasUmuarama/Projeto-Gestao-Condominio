@@ -310,7 +310,6 @@ C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\bin\Debug
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\bin\Debug\netcoreapp3.1\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\GestãoCondomínio.csproj.AssemblyReference.cache
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\GestãoCondomínio.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\GestãoCondomínio.AssemblyInfoInputs.cache
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\GestãoCondomínio.AssemblyInfo.cs
@@ -389,3 +388,5 @@ C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Usuario\Editar.cshtml.g.cs
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LayoutDeslogado.cshtml.g.cs
+C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Componentes\Menu\Default.cshtml.g.cs
+C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\GestãoCondomínio.csproj.AssemblyReference.cache
