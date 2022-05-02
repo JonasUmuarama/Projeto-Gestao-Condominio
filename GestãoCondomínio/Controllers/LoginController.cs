@@ -1,4 +1,5 @@
 ﻿using GestãoCondomínio.Models;
+using GestãoCondomínio.Repositorio;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,6 +10,11 @@ namespace GestãoCondomínio.Controllers
 {
     public class LoginController : Controller
     {
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
+        public LoginController(IUsuarioRepositorio usuarioRepositorio)
+        {
+            _usuarioRepositorio = usuarioRepositorio;
+        }
         public IActionResult Index()
         {
             return View();
@@ -19,10 +25,19 @@ namespace GestãoCondomínio.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+               UsuarioModel usuario = _usuarioRepositorio.BuscarPorLogin(loginModel.Login);
+
+                if (usuario!=null)
                 {
-                    return RedirectToAction("Index", "Home");
+                    if (usuario.SenhaValida(loginModel.Senha))
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+                    TempData["MensagemErro"] = $"Senha do usuário é inválida, tente novamente.";
                 }
+
+                TempData["MensagemErro"] = $"Usuário e/ou senha inválido(s). Por favor, tente novamente.";
+
                 return View("Index");
             }
             catch (Exception erro)
