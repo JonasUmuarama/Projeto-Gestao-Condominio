@@ -1,4 +1,4 @@
-﻿using ControleDeContatos.Models;
+﻿
 using GestãoCondomínio.Models;
 using GestãoCondomínio.Repositorio;
 using Microsoft.AspNetCore.Mvc;
