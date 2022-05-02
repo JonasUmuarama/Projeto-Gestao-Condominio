@@ -1,6 +1,5 @@
 using GestãoCondomínio.Data;
 using GestãoCondomínio.Helper;
-using GestãoCondomínio.Helper.ControleDeContatos.Helper;
 using GestãoCondomínio.Repositorio;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

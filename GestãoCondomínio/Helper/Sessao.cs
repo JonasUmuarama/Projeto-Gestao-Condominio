@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GestãoCondomínio.Models;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace GestãoCondomínio.Helper
 {
-    using GestãoCondomínio.Models;
-    using Microsoft.AspNetCore.Http;
-    using Newtonsoft.Json;
-
-    namespace ControleDeContatos.Helper
-    {
+    
         public class Sessao : ISessao
         {
             private readonly IHttpContextAccessor _httpContext;
@@ -51,4 +49,4 @@ namespace GestãoCondomínio.Helper
             }
         }
     }
-}
+
