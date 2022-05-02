@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace ControleDeContatos.Models
+namespace GestãoCondomínio.Models
 {
     public class UsuarioSemSenhaModel
     {
