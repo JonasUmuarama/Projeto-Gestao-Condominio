@@ -12,5 +12,6 @@ namespace GestãoCondomínio.Models
         public string RG { get; set; }
         public string Telefone { get; set; }
         public string Funcao { get; set; }
+        public string Descricao { get; set; }
     }
 }
