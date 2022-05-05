@@ -33,7 +33,8 @@ namespace GestãoCondomínio
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IMoradorRepositorio,MoradorRepositorio>();
-            services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            services.AddScoped<IUsuarioRepositorio,UsuarioRepositorio>();
+            services.AddScoped<IFuncionarioRepositorio,FuncionarioRepositorio>();
             services.AddScoped<ISessao, Sessao>();
 
             services.AddSession(o =>
