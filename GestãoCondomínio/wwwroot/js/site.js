@@ -6,7 +6,7 @@
 $(document).ready(function () {
     getDatatable('#table-moradores');
     getDatatable('#table-usuarios');
-    getDatatable('#table-funcionarios');
+    getDatatable('#table-funcionario');
 })
 
 function getDatatable(id) {
