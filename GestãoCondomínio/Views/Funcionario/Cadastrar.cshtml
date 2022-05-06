@@ -1,0 +1,43 @@
+﻿@model FuncionarioModel
+
+@{
+    ViewData["Title"] = "Cadastrar funcionário";
+}
+
+<div class="text-center">
+   
+    <h1 class="display-4">Cadastrar Funcionário</h1>
+
+</div>
+
+<form asp-controller="Morador" asp-action="Cadastrar" method="post">
+
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do funcionário">
+        @Html.ValidationMessageFor(x => x.Nome)
+    </div>
+    <div class="form-group">
+        <label for="Rg">RG</label>
+        <input type="text" asp-for="RG" class="form-control" placeholder="Digite o RG do funcionário">
+        @Html.ValidationMessageFor(x => x.RG)
+    </div>
+    <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input type="text" asp-for="Funcao" class="form-control" placeholder="Digite a Função do funcionário">
+        @Html.ValidationMessageFor(x => x.Funcao)
+    </div>
+    <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="text" asp-for="Telefone" class="form-control" placeholder="Digite o telefone do funcionário">
+        @Html.ValidationMessageFor(x => x.Telefone)
+    </div>
+    <div class="form-group">
+        <label for="email">Descrição</label>
+        <input type="email" asp-for="Descricao" class="form-control" placeholder="Digite o turno de trabalho">
+        @Html.ValidationMessageFor(x=>x.Descricao)
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a class="btn btn-secondary" asp-controller="Funcionario" asp-action="Index" role="button">Voltar</a>
+</form>
