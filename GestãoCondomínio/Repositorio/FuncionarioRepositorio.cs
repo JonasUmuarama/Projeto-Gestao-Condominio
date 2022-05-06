@@ -63,11 +63,6 @@ namespace GestãoCondomínio.Repositorio
             return true;
         }
 
-        List<FuncionarioModel> IFuncionarioRepositorio.BuscarTodos()
-        {
-            throw new NotImplementedException();
-        }
-
        
     }
 }
