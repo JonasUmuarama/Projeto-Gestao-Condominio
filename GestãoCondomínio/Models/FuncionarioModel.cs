@@ -9,15 +9,16 @@ namespace GestãoCondomínio.Models
     public class FuncionarioModel
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
         [Required(ErrorMessage = "Digite o Nome do funcionário")]
-        public string RG { get; set; }
+        public string Nome { get; set; }
         [Required(ErrorMessage = "Digite o RG do funcionário")]
-        public string Telefone { get; set; }
+        public string RG { get; set; }
         [Required(ErrorMessage = "Digite o Telefone do funcionário")]
-        public string Funcao { get; set; }
+        public string Telefone { get; set; }
         [Required(ErrorMessage = "Digite a Função do funcionário")]
-        public string Descricao { get; set; }
+        public string Funcao { get; set; }
         [Required(ErrorMessage = "Digite a Descrição do funcionário")]
+        public string Descricao { get; set; }
+
     }
 }
