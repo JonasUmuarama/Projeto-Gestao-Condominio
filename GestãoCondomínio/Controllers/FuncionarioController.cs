@@ -37,6 +37,27 @@ namespace GestãoCondomínio.Controllers
             FuncionarioModel funcionario = _funcionarioRepositorio.ListarPorId(id);
             return View(funcionario);
         }
+        public IActionResult Deletar(int id)
+        {
+            try
+            {
+                bool apagado = _funcionarioRepositorio.Deletar(id);
+                if (apagado)
+                {
+                    TempData["MensagemSucesso"] = "Funcionário excluído com sucesso!";
+                }
+                else
+                {
+                    TempData["MensagemErro"] = $"Erro ao excluir, tente novamente";
+                }
+                return RedirectToAction("Index");
+            }
+            catch (Exception erro)
+            {
+                TempData["MensagemErro"] = $"Erro ao excluir, tente novamente, mais detalhes: {erro.Message} ";
+                return RedirectToAction("Index");
+            }
+        }
         [HttpPost]
         public IActionResult Cadastrar(FuncionarioModel funcionario)
         {
