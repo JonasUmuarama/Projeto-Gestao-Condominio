@@ -1,0 +1,37 @@
+﻿@model FuncionarioModel
+@{
+    ViewData["Title"] = "Editar funcionário";
+}
+<div class="text-center">
+
+    <h1 class="display-4">Editar funcionário</h1>
+
+</div>
+
+<form asp-controller="Funcionario" asp-action="Editar">
+    <input  type="hidden" asp-for="Id"/>
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do funcionário">
+        @Html.ValidationMessageFor(x => x.Nome)
+    </div>
+    <div class="form-group">
+        <label for="Rg">RG</label>
+        <input type="text" asp-for="RG" class="form-control" placeholder="Digite o RG do morador">
+        @Html.ValidationMessageFor(x => x.RG)
+    </div>
+    <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input type="text" asp-for="Funcao" class="form-control" placeholder="Digite o CPF do morador">
+        @Html.ValidationMessageFor(x => x.Funcao)
+    </div>
+    <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="text" asp-for="Telefone" class="form-control" placeholder="Digite o telefone do morador">
+        @Html.ValidationMessageFor(x => x.Telefone)
+    </div>
+    
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+    <a class="btn btn-secondary" asp-controller="Funcionario" asp-action="Index" role="button">Voltar</a>
+</form>
