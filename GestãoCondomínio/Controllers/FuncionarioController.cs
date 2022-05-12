@@ -51,5 +51,29 @@ namespace GestãoCondomínio.Controllers
             }
 
         }
+
+
+        [HttpPost]
+        public IActionResult Editar(FuncionarioModel funcionario)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _funcionarioRepositorio.Atualizar(funcionario);
+                    TempData["MensagemSucesso"] = "Morador alterado com sucesso!";
+                    return RedirectToAction("Index");
+                }
+
+                return View(funcionario);
+            }
+            catch (Exception erro)
+            {
+
+                TempData["MensagemErro"] = $"Erro ao atualizar, tente novamnete,detalhe do erro :{ erro.Message}";
+                return RedirectToAction("Index");
+            }
+
+        }
     }
 }

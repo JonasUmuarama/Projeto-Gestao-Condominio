@@ -392,3 +392,4 @@ C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\GestãoCondomínio.csproj.AssemblyReference.cache
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Funcionario\Index.cshtml.g.cs
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Funcionario\Cadastrar.cshtml.g.cs
+C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Funcionario\Editar.cshtml.g.cs
