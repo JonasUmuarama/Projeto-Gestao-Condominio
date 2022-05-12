@@ -61,7 +61,7 @@ namespace GestãoCondomínio.Controllers
                 if (ModelState.IsValid)
                 {
                     _funcionarioRepositorio.Atualizar(funcionario);
-                    TempData["MensagemSucesso"] = "Morador alterado com sucesso!";
+                    TempData["MensagemSucesso"] = "Funcionário alterado com sucesso!";
                     return RedirectToAction("Index");
                 }
 
