@@ -27,6 +27,11 @@ namespace GestãoCondomínio.Controllers
         {
             return View();
         }
+        public IActionResult Editar(int id)
+        {
+            FuncionarioModel funcionario = _funcionarioRepositorio.ListarPorId(id);
+            return View(funcionario);
+        }
 
         [HttpPost]
         public IActionResult Cadastrar(FuncionarioModel funcionario)
