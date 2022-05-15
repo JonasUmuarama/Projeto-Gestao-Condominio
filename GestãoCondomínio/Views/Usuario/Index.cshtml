@@ -4,7 +4,7 @@
 }
 <div class="text-center">
     <div class="d-grid  gap-2 d-md-flex justify-content-md-start">
-        <a class="btn btn-primary" role="button" asp-controller="Usuario" asp-action="Cadastrar">Novo Usuário</a>
+        <a class="btn btn-primary" role="button" asp-controller="Usuario" asp-action="Cadastrar"> <i class="fa fa-plus-circle"></i>Novo Usuário</a>
     </div>
     <br />
     @if (TempData["MensagemSucesso"] != null)
@@ -51,8 +51,8 @@
                         <td>@usuario.DataCadastro</td>
                         <td>
                             <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-primary" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Editar">Editar</a>
-                                <a role="button" class="btn btn-danger" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Apagar">Deletar</a>
+                                <a role="button" class="btn btn-primary" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Editar"><i class="fa fa-edit"></i></a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@usuario.Id" asp-controller="Usuario" asp-action="Apagar"> <i class="fa fa-trash"></i></a>
                             </div>
                         </td>
                     </tr>
