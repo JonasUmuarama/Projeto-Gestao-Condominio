@@ -10,12 +10,11 @@
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Página Inicial</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Morador" asp-action="Index">Moradores</a>
-        </li>
 
         @if (Model.Perfil == GestãoCondomínio.Enums.PerfilEnum.Admin)
-        {
+        {   <li class="nav-item">
+                 <a class="nav-link text-dark" asp-area="" asp-controller="Morador" asp-action="Index">Moradores</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuários</a>
             </li>
@@ -26,7 +25,6 @@
             <li class="nav-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="Veiculo" asp-action="">Veículos</a>
             </li>
-
 
         }
         <li class="nav-item">
