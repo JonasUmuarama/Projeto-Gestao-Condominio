@@ -18,5 +18,7 @@ namespace GestãoCondomínio.Data
 
         public DbSet<FuncionarioModel> Funcionarios { get; set; }
 
+        public DbSet<VeiculoModel> Veiculos { get; set; }
+
     }
 }
