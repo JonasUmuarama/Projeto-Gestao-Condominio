@@ -35,6 +35,7 @@ namespace GestãoCondomínio
             services.AddScoped<IMoradorRepositorio,MoradorRepositorio>();
             services.AddScoped<IUsuarioRepositorio,UsuarioRepositorio>();
             services.AddScoped<IFuncionarioRepositorio,FuncionarioRepositorio>();
+            services.AddScoped<IVeiculoRepositorio,VeiculoRepositorio>();
             services.AddScoped<ISessao, Sessao>();
 
             services.AddSession(o =>
