@@ -3,5 +3,8 @@
     border-radius:10px;
     padding:30px;
     box-shadow: 0px 0px 10px 0px;
-
+    background-color:whitesmoke;
+}
+body {
+    background-color: lavender;
 }
