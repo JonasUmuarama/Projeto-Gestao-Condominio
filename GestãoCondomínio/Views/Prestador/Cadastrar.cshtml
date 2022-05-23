@@ -1,0 +1,44 @@
+﻿@model PrestadorModel
+
+@{
+    ViewData["Title"] = "Cadastrar prestador de serviço";
+}
+
+<div class="text-center">
+   
+    <h1 class="display-4">Cadastrar prestador de serviço</h1>
+
+</div>
+
+<form asp-controller="Prestador" asp-action="Cadastrar" method="post">
+
+    <div class="Form-Container">
+        <label for="nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome ">
+        @Html.ValidationMessageFor(x => x.Nome)
+    
+    
+        <label for="Rg">RG</label>
+        <input type="text" asp-for="RG" class="form-control" placeholder="Digite o RG ">
+        @Html.ValidationMessageFor(x => x.RG)
+    
+    
+        <label for="cpf">CPF</label>
+        <input type="text" asp-for="CPF" class="form-control" placeholder="Digite o CPF ">
+        @Html.ValidationMessageFor(x => x.CPF)
+    
+    
+        <label for="contato">Contato</label>
+        <input type="text" asp-for="Contato" class="form-control" placeholder="Digite o telefone ">
+        @Html.ValidationMessageFor(x => x.Contato)
+    
+    
+        <label for="empresa">Empresa</label>
+        <input type="text" asp-for="Empresa" class="form-control" placeholder="Digite o nome da empresa">
+        @Html.ValidationMessageFor(x=>x.Empresa)
+   
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a class="btn btn-secondary" asp-controller="Prestador" asp-action="Index" role="button">Voltar</a>
+</form>
