@@ -41,12 +41,12 @@ namespace GestãoCondomínio.Repositorio
         public VisitanteModel Atualizar(VisitanteModel visitante)
         {
             VisitanteModel visitanteDB = ListarPorId(visitante.Id);
-            if (visitanteDB == null) throw new Exception("Houve um erro na atualização do visitante!");
+            if (visitanteDB == null) throw new Exception("Houve um erro na atualização do veículo!");
             visitanteDB.Nome = visitante.Nome;
             visitanteDB.RG = visitante.RG;
             visitanteDB.CPF = visitante.CPF;
             visitanteDB.Contato = visitante.Contato;
-        
+           
            
 
             _bancoContext.Visitantes.Update(visitanteDB);
@@ -64,6 +64,9 @@ namespace GestãoCondomínio.Repositorio
             return true;
         }
 
-       
+        VeiculoModel IVisitanteRepositorio.ListarPorId(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
