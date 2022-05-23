@@ -22,5 +22,7 @@ namespace GestãoCondomínio.Data
 
         public DbSet<PrestadorModel> Prestadores { get; set; }
 
+        public DbSet<VisitanteModel> Visitantes { get; set; }
+
     }
 }

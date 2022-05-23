@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GestãoCondomínio.Models
 {
-    public class Visitante
+    public class VisitanteModel
     {
         public int Id { get; set; }
         public string Nome { get; set; }
