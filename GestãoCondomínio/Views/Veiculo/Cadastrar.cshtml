@@ -12,32 +12,30 @@
 
 <form asp-controller="Veiculo" asp-action="Cadastrar" method="post">
 
-    <div class="form-group">
+    <div class="Form-Container">
         <label for="placa">Placa</label>
         <input type="text" asp-for="Placa" class="form-control" placeholder="Digite a placa do veículo">
         @Html.ValidationMessageFor(x => x.Placa)
-    </div>
-    <div class="form-group">
+    
+    
         <label for="Marca">Marca</label>
         <input type="text" asp-for="Marca" class="form-control" placeholder="Digite a marca do veículo">
         @Html.ValidationMessageFor(x => x.Marca)
-    </div>
-    <div class="form-group">
+   
+    
         <label for="modelo">Modelo</label>
         <input type="text" asp-for="Modelo" class="form-control" placeholder="Digite o modelo do veículo">
         @Html.ValidationMessageFor(x => x.Modelo)
-    </div>
-    <div class="form-group">
+
         <label for="cor">Cor</label>
         <input type="text" asp-for="Cor" class="form-control" placeholder="Digite a cor do veículo">
         @Html.ValidationMessageFor(x => x.Cor)
-    </div>
-    <div class="form-group">
+
         <label for="tipo">Tipo</label>
         <input type="text" asp-for="Tipo" class="form-control" placeholder="Digite o tipo do veículo">
         @Html.ValidationMessageFor(x => x.Tipo)
     </div>
-   
+   <br />
     <button type="submit" class="btn btn-primary">Salvar</button>
     <a class="btn btn-secondary" asp-controller="Veiculo" asp-action="Index" role="button">Voltar</a>
 </form>
