@@ -8,6 +8,7 @@ $(document).ready(function () {
     getDatatable('#table-usuarios');
     getDatatable('#table-funcionario');
     getDatatable('#table-veiculos');
+    getDatatable('#table-prestadores');
 })
 
 function getDatatable(id) {

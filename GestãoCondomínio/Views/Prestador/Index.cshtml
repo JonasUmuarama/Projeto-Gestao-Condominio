@@ -1,0 +1,66 @@
+﻿@model List<PrestadorModel>
+@{
+    ViewData["Title"] = "Listagem de prestadores";
+}
+<div class="text-center">
+    <div class="d-grid  gap-2 d-md-flex justify-content-md-start">
+        <a class="btn btn-primary" role="button" asp-controller="Prestador" asp-action="Cadastrar"> <i class="fa fa-plus-circle"></i> Novo Prestador</a>
+    </div>
+    <br />
+    @if (TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+             <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Fechar ">x</button>
+              @TempData["MensagemSucesso"]
+        </div>
+    }
+
+    @if (TempData["MensagemErro"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            <button type="button" class="btn btn-danger btn-sm close-alert" arial-label="Fechar ">X</button>
+            @TempData["MensagemErro"]
+        </div>
+    }
+
+    <br />
+
+    <h1 class="display-4">Listagem de prestadores</h1>
+
+    <table class="table" id="table-prestadores">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nome</th>
+                <th scope="col">RG</th>
+                <th scope="col">CPF</th>
+                <th scope="col">Contato</th>
+                <th scope="col">Empresa</th>
+                <th scope="col"> </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (PrestadorModel prestador in Model)
+                {
+                    <tr>
+                        <th scope="row">@prestador.Id</th>
+                        <td>@prestador.Nome</td>
+                        <td>@prestador.RG</td>
+                        <td>@prestador.CPF</td>
+                        <td>@prestador.Contato</td>
+                        <td>@prestador.Empresa</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a role="button" class="btn btn-primary" asp-route-id="@prestador.Id" asp-controller="Prestador" asp-action="Editar"><i class="fa fa-edit"></i></a>
+                                <a role="button" class="btn btn-danger" asp-route-id="@prestador.Id" asp-controller="Prestador" asp-action="Apagar"><i class="fa fa-trash"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+
+</div>
