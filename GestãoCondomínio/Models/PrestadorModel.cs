@@ -13,7 +13,5 @@ namespace GestãoCondomínio.Models
         public string CPF {get;set;}
         public string Contato { get; set; }
         public string Empresa { get; set; }
-
-
     }
 }
