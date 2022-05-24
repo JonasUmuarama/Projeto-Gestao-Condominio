@@ -29,7 +29,7 @@ namespace GestãoCondomínio.Controllers
 
         public IActionResult Editar(int id)
         {
-            VisitanteModel visitante = _visitanteRepositorio.ListarPorId(id);
+            VisitanteModel visitante = _visitanteRepositorio.BuscarTodos();
             return View(visitante);
         }
 
