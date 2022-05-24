@@ -64,9 +64,5 @@ namespace GestãoCondomínio.Repositorio
             return true;
         }
 
-        VeiculoModel IVisitanteRepositorio.ListarPorId(int id)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

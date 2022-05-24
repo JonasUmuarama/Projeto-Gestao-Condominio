@@ -11,11 +11,11 @@ namespace GestãoCondomínio.Controllers
     public class VisitanteController : Controller
     {
         private readonly IVisitanteRepositorio _visitanteRepositorio;
+
         public VisitanteController(IVisitanteRepositorio visitanteRepositorio)
         {
             _visitanteRepositorio = visitanteRepositorio;
         }
-
         public IActionResult Index()
         {
             List<VisitanteModel> visitantes = _visitanteRepositorio.BuscarTodos();
@@ -29,7 +29,7 @@ namespace GestãoCondomínio.Controllers
 
         public IActionResult Editar(int id)
         {
-            VisitanteModel visitante = _visitanteRepositorio.BuscarTodos();
+            VisitanteModel visitante = _visitanteRepositorio.ListarPorId(id);
             return View(visitante);
         }
 
@@ -46,7 +46,7 @@ namespace GestãoCondomínio.Controllers
                 bool apagado = _visitanteRepositorio.Deletar(id);
                 if (apagado)
                 {
-                    TempData["MensagemSucesso"] = "Veículo excluído com sucesso!";
+                    TempData["MensagemSucesso"] = "Visitante excluído com sucesso!";
                 }
                 else
                 {
@@ -69,7 +69,7 @@ namespace GestãoCondomínio.Controllers
                 if (ModelState.IsValid)
                 {
                     _visitanteRepositorio.Adicionar(visitante);
-                    TempData["MensagemSucesso"] = "Veículo cadastrado com sucesso!";
+                    TempData["MensagemSucesso"] = "Visitante cadastrado com sucesso!";
                     return RedirectToAction("Index");
                 }
 
@@ -93,7 +93,7 @@ namespace GestãoCondomínio.Controllers
                 if (ModelState.IsValid)
                 {
                     _visitanteRepositorio.Atualizar(visitante);
-                    TempData["MensagemSucesso"] = "Veículo alterado com sucesso!";
+                    TempData["MensagemSucesso"] = "Visitante alterado com sucesso!";
                     return RedirectToAction("Index");
                 }
 
@@ -105,7 +105,6 @@ namespace GestãoCondomínio.Controllers
                 TempData["MensagemErro"] = $"Erro ao atualizar, tente novamnete,detalhe do erro :{ erro.Message}";
                 return RedirectToAction("Index");
             }
-
 
         }
     }
