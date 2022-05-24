@@ -28,10 +28,9 @@
         <label for="Contato">Contato</label>
         <input type="text" asp-for="Contato" class="form-control">
         @Html.ValidationMessageFor(x => x.Contato)
-    
    
     </div>
 
     <button type="submit" class="btn btn-primary">Editar</button>
-    <a class="btn btn-secondary" asp-controller="Veiculo" asp-action="Index" role="button">Voltar</a>
+    <a class="btn btn-secondary" asp-controller="Visitante" asp-action="Index" role="button">Voltar</a>
 </form>
