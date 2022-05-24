@@ -10,7 +10,7 @@ namespace GestãoCondomínio.Controllers
 {
     public class VisitanteController : Controller
     {
-        private readonly IVisitanteRepositorio _veiculoRepositorio;
+        private readonly IVisitanteRepositorio _visitanteRepositorio;
 
         public IActionResult Index()
         {
@@ -25,7 +25,7 @@ namespace GestãoCondomínio.Controllers
 
         public IActionResult Editar(int id)
         {
-            VisitanteModel veiculo = _visitanteRepositorio.ListarPorId(id);
+            VisitanteModel visitante = _visitanteRepositorio.ListarPorId(id);
             return View(visitante);
         }
 
@@ -39,7 +39,7 @@ namespace GestãoCondomínio.Controllers
         {
             try
             {
-                bool apagado = _veiculoRepositorio.Deletar(id);
+                bool apagado = _visitanteRepositorio.Deletar(id);
                 if (apagado)
                 {
                     TempData["MensagemSucesso"] = "Veículo excluído com sucesso!";
@@ -64,7 +64,7 @@ namespace GestãoCondomínio.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _veiculoRepositorio.Adicionar(visitante);
+                    _visitanteRepositorio.Adicionar(visitante);
                     TempData["MensagemSucesso"] = "Veículo cadastrado com sucesso!";
                     return RedirectToAction("Index");
                 }
@@ -88,7 +88,7 @@ namespace GestãoCondomínio.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    _veiculoRepositorio.Atualizar(visitante);
+                    _visitanteRepositorio.Atualizar(visitante);
                     TempData["MensagemSucesso"] = "Veículo alterado com sucesso!";
                     return RedirectToAction("Index");
                 }

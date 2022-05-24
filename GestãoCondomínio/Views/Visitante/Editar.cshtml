@@ -1,0 +1,37 @@
+﻿@model VisitanteModel
+@{
+    ViewData["Title"] = "Editar visitante";
+}
+<div class="text-center">
+
+    <h1 class="display-4">Editar visitante</h1>
+
+</div>
+
+<form asp-controller="Visitante" asp-action="Editar">
+    <input  type="hidden" asp-for="Id"/>
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control">
+        @Html.ValidationMessageFor(x => x.Nome)
+    
+        <label for="Rg">RG</label>
+        <input type="text" asp-for="RG" class="form-control">
+        @Html.ValidationMessageFor(x => x.RG)
+    
+    
+        <label for="CPF">CPF</label>
+        <input type="text" asp-for="CPF" class="form-control">
+        @Html.ValidationMessageFor(x => x.CPF)
+    
+
+        <label for="Contato">Contato</label>
+        <input type="text" asp-for="Contato" class="form-control">
+        @Html.ValidationMessageFor(x => x.Contato)
+    
+   
+    </div>
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+    <a class="btn btn-secondary" asp-controller="Veiculo" asp-action="Index" role="button">Voltar</a>
+</form>

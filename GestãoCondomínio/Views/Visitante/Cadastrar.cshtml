@@ -1,0 +1,39 @@
+﻿@model VisitanteModel
+
+@{
+    ViewData["Title"] = "Cadastrar Visitante";
+}
+
+<div class="text-center">
+   
+    <h1 class="display-4">Cadastrar visitante</h1>
+
+</div>
+
+<form asp-controller="Visitante" asp-action="Cadastrar" method="post">
+
+    <div class="Form-Container">
+        <label for="nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do visitante">
+        @Html.ValidationMessageFor(x => x.Nome)
+    
+    
+        <label for="RG">RG</label>
+        <input type="text" asp-for="RG" class="form-control" placeholder="Digite o RG">
+        @Html.ValidationMessageFor(x => x.RG)
+   
+    
+        <label for="CPF">CPF</label>
+        <input type="text" asp-for="CPF" class="form-control" placeholder="Digite o CPF">
+        @Html.ValidationMessageFor(x => x.CPF)
+
+        <label for="contato">Contato</label>
+        <input type="text" asp-for="Contato" class="form-control" placeholder="Digite o contato">
+        @Html.ValidationMessageFor(x => x.Contato)
+
+       
+    </div>
+   <br />
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a class="btn btn-secondary" asp-controller="Visitante" asp-action="Index" role="button">Voltar</a>
+</form>
