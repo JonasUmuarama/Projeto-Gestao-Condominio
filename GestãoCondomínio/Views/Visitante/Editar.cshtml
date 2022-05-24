@@ -1,6 +1,6 @@
 ﻿@model VisitanteModel
 @{
-    ViewData["Title"] = "Editar visitante";
+    ViewData["Title"] = "Editar Visitante";
 }
 <div class="text-center">
 
@@ -15,7 +15,7 @@
         <input type="text" asp-for="Nome" class="form-control">
         @Html.ValidationMessageFor(x => x.Nome)
     
-        <label for="Rg">RG</label>
+        <label for="RG">RG</label>
         <input type="text" asp-for="RG" class="form-control">
         @Html.ValidationMessageFor(x => x.RG)
     

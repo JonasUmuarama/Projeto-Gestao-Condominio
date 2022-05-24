@@ -402,3 +402,7 @@ C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Prestador\Apagar.cshtml.g.cs
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Prestador\Cadastrar.cshtml.g.cs
 C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Prestador\Editar.cshtml.g.cs
+C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Visitante\Apagar.cshtml.g.cs
+C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Visitante\Cadastrar.cshtml.g.cs
+C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Visitante\Editar.cshtml.g.cs
+C:\Users\jonas\Documents\Projeto\GestãoCondomínio\GestãoCondomínio\obj\Debug\netcoreapp3.1\Razor\Views\Visitante\Index.cshtml.g.cs

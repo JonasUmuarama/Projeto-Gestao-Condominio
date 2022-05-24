@@ -11,6 +11,10 @@ namespace GestãoCondomínio.Controllers
     public class VisitanteController : Controller
     {
         private readonly IVisitanteRepositorio _visitanteRepositorio;
+        public VisitanteController(IVisitanteRepositorio visitanteRepositorio)
+        {
+            _visitanteRepositorio = visitanteRepositorio;
+        }
 
         public IActionResult Index()
         {
