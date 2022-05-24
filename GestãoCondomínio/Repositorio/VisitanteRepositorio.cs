@@ -41,7 +41,7 @@ namespace GestãoCondomínio.Repositorio
         public VisitanteModel Atualizar(VisitanteModel visitante)
         {
             VisitanteModel visitanteDB = ListarPorId(visitante.Id);
-            if (visitanteDB == null) throw new Exception("Houve um erro na atualização do veículo!");
+            if (visitanteDB == null) throw new Exception("Houve um erro na atualização do visitante!");
             visitanteDB.Nome = visitante.Nome;
             visitanteDB.RG = visitante.RG;
             visitanteDB.CPF = visitante.CPF;

@@ -8,7 +8,7 @@ namespace GestãoCondomínio.Repositorio
 {
     public interface IVisitanteRepositorio
     { 
-        VeiculoModel ListarPorId(int id);
+        VisitanteModel ListarPorId(int id);
         List<VisitanteModel> BuscarTodos();
         VisitanteModel Adicionar(VisitanteModel visitante);
         VisitanteModel Atualizar(VisitanteModel visitante);
