@@ -14,7 +14,7 @@ namespace GestãoCondomínio.Models
         public string Documento { get; set; }
         public DateTime Entrada { get; set; }
 
-        public DateTime Saida { get; set; }
+        public DateTime? Saida { get; set; }
 
         public string Destino { get; set; }
 
