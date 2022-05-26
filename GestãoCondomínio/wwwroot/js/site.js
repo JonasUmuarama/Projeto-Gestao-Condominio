@@ -10,6 +10,7 @@ $(document).ready(function () {
     getDatatable('#table-veiculos');
     getDatatable('#table-prestadores');
     getDatatable('#table-visitantes');
+    getDatatable('#table-acessos');
 })
 
 function getDatatable(id) {
