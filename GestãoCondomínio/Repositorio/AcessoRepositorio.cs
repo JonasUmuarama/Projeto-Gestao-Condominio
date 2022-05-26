@@ -38,15 +38,15 @@ namespace GestãoCondomínio.Repositorio
 
         }
 
-        public AcessoModel Atualizar(AcessoModel acessso)
+        public AcessoModel Atualizar(AcessoModel acesso)
         {
-            AcessoModel acesssoDB = ListarPorId(acesso.Id);
+            AcessoModel acessoDB = ListarPorId(acesso.Id);
             if (acessoDB == null) throw new Exception("Houve um erro na atualização do acesso!");
-            acessoDB.Condutor = funcionario.Nome;
-            acessoDB.RG = funcionario.RG;
-            acessoDB.Funcao = funcionario.Funcao;
-            acessoDB.Telefone = funcionario.Telefone;
-            acessoDB.Descricao = funcionario.Descricao;
+            acessoDB.Veiculo = acesso.Veiculo;
+            acessoDB.Condutor = acesso.Condutor;
+            acessoDB.Documento = acesso.Documento;
+            acessoDB.Entrada = acesso.Entrada;
+            acessoDB.Saida = acesso.Saida;
 
             _bancoContext.Acessos.Update(acessoDB);
             _bancoContext.SaveChanges();
@@ -56,9 +56,9 @@ namespace GestãoCondomínio.Repositorio
 
         public bool Deletar(int id)
         {
-            FuncionarioModel funcionarioDB = ListarPorId(id);
-            if (funcionarioDB == null) throw new Exception("Houve um erro na exclusão do funcionário!");
-            _bancoContext.Funcionarios.Remove(funcionarioDB);
+            AcessoModel acessoDB = ListarPorId(id);
+            if (acessoDB == null) throw new Exception("Houve um erro na exclusão do acesso!");
+            _bancoContext.Acessos.Remove(acessoDB);
             _bancoContext.SaveChanges();
             return true;
         }
