@@ -1,0 +1,42 @@
+﻿@model AcessoModel
+@{
+    ViewData["Title"] = "Editar acesso";
+}
+<div class="text-center">
+
+    <h1 class="display-4">Editar acesso</h1>
+
+</div>
+
+<form asp-controller="Funcionario" asp-action="Editar">
+    <input  type="hidden" asp-for="Id"/>
+    <div class="form-group">
+        <label for="veiculo">Veículo</label>
+        <input type="text" asp-for="Veiculo" class="form-control">
+        @Html.ValidationMessageFor(x => x.Veiculo)
+   
+        <label for="condutor">Condutor</label>
+        <input type="text" asp-for="Condutor" class="form-control">
+        @Html.ValidationMessageFor(x => x.Condutor)
+
+        <label for="doc">Documento</label>
+        <input type="text" asp-for="Documento" class="form-control">
+        @Html.ValidationMessageFor(x => x.Documento)
+ 
+        <label for="entrada">Entrada</label>
+        <input type="text" asp-for="Entrada" class="form-control" >
+        @Html.ValidationMessageFor(x => x.Entrada)
+  
+        <label for="saida">Saída</label>
+        <input type="text" asp-for="Saida" class="form-control">
+        @Html.ValidationMessageFor(x => x.Saida)
+
+        <label for="destino">Destino</label>
+        <input type="text" asp-for="Destino" class="form-control">
+        @Html.ValidationMessageFor(x => x.Destino)
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Editar</button>
+    <a class="btn btn-secondary" asp-controller="Funcionario" asp-action="Index" role="button">Voltar</a>
+</form>
