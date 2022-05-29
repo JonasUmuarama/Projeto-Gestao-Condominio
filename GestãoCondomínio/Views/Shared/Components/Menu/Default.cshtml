@@ -7,43 +7,36 @@
 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
     <ul class="navbar-nav flex-grow-1">
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><h5>Usuário:  @Model.Nome </h5> </a>
         </li>
-
+        <li class="nav-item">
+            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+        </li>
         @if (Model.Perfil == GestãoCondomínio.Enums.PerfilEnum.Admin)
         {
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Morador" asp-action="Index">Moradores</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link text-light dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Cadastros
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" asp-area="" asp-controller="Usuario" asp-action="Index">Usuários</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="Veiculo" asp-action="">Veículos</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="Morador" asp-action="Index">Moradores</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="Visitante" asp-action="Index">Visitantes</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="Prestador" asp-action="">Prestadores de Serviços</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="Funcionario" asp-action="">Funcionários</a>
+                </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Visitante" asp-action="Index">Visitantes</a>
+                <a class="nav-link text-light" asp-area="" asp-controller="Acesso" asp-action="">Acessos</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuários</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Funcionario" asp-action="">Funcionários</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Prestador" asp-action="">Prestadores</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Veiculo" asp-action="">Veículos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Acesso" asp-action="">Acessos</a>
-            </li>
-
         }
 
+
         <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
+            <a class="nav-link text-light" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
         </li>
-        @*<li class="nav-item">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><h5> @Model.Nome </h5> </a>
-        </li>*@
+
 
     </ul>
 

@@ -15,7 +15,8 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark  border-bottom box-shadow mb-3 ">
+
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SGCD</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -26,39 +27,70 @@
             <div class="container">
 
                 @*<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Página Inicial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Morador" asp-action="Index">Moradores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Funcionario" asp-action="">Funcionários</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Veiculo" asp-action="">Veículos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
+                </li>
+
+            </ul>
+        </div>*@
+                @*@await Component.InvokeAsync("Menu")*@
+
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Página Inicial</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
                         </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link text-light dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Cadastros
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" asp-area="" asp-controller="Usuario" asp-action="Index">Usuários</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Veiculo" asp-action="">Veículos</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Morador" asp-action="Index">Moradores</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Visitante" asp-action="Index">Visitantes</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Prestador" asp-action="">Prestadores de Serviços</a>
+                                    <a class="dropdown-item" asp-area="" asp-controller="Funcionario" asp-action="">Funcionários</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-area="" asp-controller="Acesso" asp-action="">Acessos</a>
+                            </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Morador" asp-action="Index">Moradores</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuários</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Funcionario" asp-action="">Funcionários</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Veiculo" asp-action="">Veículos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
-                        </li>
-
                     </ul>
-                </div>*@
-                @await Component.InvokeAsync("Menu")
+
+                </div>
+
             </div>
         </nav>
     </header>
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
+
         </main>
     </div>
 
-    <footer class="border-top footer text-muted text text-center">
+    <footer class="border-top footer text-muted text text-center bg-dark">
         <div class="container">
             &copy; 2022 - Sistema de Gestão para Condomínio
         </div>
