@@ -26,5 +26,7 @@ namespace GestãoCondomínio.Data
 
         public DbSet<AcessoModel> Acessos { get; set; }
 
+        public DbSet<TbPessoaModel> TbPessoas { get; set; }
+
     }
 }

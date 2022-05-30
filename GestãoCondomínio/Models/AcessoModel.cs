@@ -16,6 +16,10 @@ namespace GestãoCondomínio.Models
 
         public DateTime? Saida { get; set; }
 
+        public int PessoaId { get; set; }
+        public virtual TbPessoaModel TbPessoaModel { get; set; }
+        public int IdVeiculo { get; set; }
+        public virtual VeiculoModel VeiculoModel { get; set; }
         public string Destino { get; set; }
 
 

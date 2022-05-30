@@ -15,6 +15,9 @@ namespace GestãoCondomínio.Models
         public string Modelo { get; set; }
         public string Cor { get; set; }
         public string Tipo { get; set; }
+        public int IdPessoa { get; set; }
+        public virtual TbPessoaModel TbPessoaModel { get; set; }
+        public virtual List<AcessoModel> Acessos { get; set; }
 
     }
 }
