@@ -1,0 +1,47 @@
+﻿@model List<AcessoModel>
+@{
+    ViewData["Title"] = "Acessos";
+}
+<div class="text-center">
+
+
+    <h1 class="display-4">Acessos</h1>
+
+    <table class="table" id="table-acessos">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Veículo</th>
+                <th scope="col">Condutor</th>
+                <th scope="col">Documento</th>
+                <th scope="col">Entrada</th>
+                <th scope="col">Saída</th>
+                <th scope="col">Destino</th>
+                <th scope="col"> </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (AcessoModel acesso in Model)
+                {
+                    <tr>
+                        <th scope="row">@acesso.Id</th>
+                        <td>@acesso.Veiculo</td>
+                        <td>@acesso.Condutor</td>
+                        <td>@acesso.Documento</td>
+                        <td>@acesso.Entrada</td>
+                        <td>@acesso.Saida</td>
+                        <td>@acesso.Destino</td>
+
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr class="odd"><td valign="top" colspan="5">Nenhum acesso encontrado</td></tr>
+            }
+        </tbody>
+    </table>
+
+</div>

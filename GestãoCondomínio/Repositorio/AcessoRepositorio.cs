@@ -47,6 +47,7 @@ namespace GestãoCondomínio.Repositorio
             acessoDB.Documento = acesso.Documento;
             acessoDB.Entrada = acesso.Entrada;
             acessoDB.Saida = acesso.Saida;
+           
 
             _bancoContext.Acessos.Update(acessoDB);
             _bancoContext.SaveChanges();

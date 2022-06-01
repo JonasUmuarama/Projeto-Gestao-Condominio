@@ -103,7 +103,7 @@ namespace GestãoCondomínio.Controllers
             catch (Exception erro)
             {
 
-                TempData["MensagemErro"] = $"Erro ao atualizar, tente novamnete,detalhe do erro :{ erro.Message}";
+                TempData["MensagemErro"] = $"Erro ao atualizar, tente novamente,detalhe do erro :{ erro.Message}";
                 return RedirectToAction("Index");
             }
 

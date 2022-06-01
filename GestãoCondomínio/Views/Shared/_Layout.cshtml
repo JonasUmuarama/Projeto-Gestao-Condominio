@@ -25,33 +25,9 @@
                 </button>
             </div>
             <div class="container">
+                @await Component.InvokeAsync("Menu")
 
                 @*<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-            <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Página Inicial</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Morador" asp-action="Index">Moradores</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuários</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Funcionario" asp-action="">Funcionários</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Veiculo" asp-action="">Veículos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
-                </li>
-
-            </ul>
-        </div>*@
-                @*@await Component.InvokeAsync("Menu")*@
-
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
@@ -79,7 +55,8 @@
 
                 </div>
 
-            </div>
+            </div>*@
+                </div>
         </nav>
     </header>
 

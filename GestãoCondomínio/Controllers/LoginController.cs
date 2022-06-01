@@ -20,7 +20,7 @@ namespace GestãoCondomínio.Controllers
 
         public IActionResult Index()
         {
-            // Se usuario estiver loago, redirecionar para a home
+            // Se usuario estiver logado, redirecionar para a home
 
             if (_sessao.BuscarSessaoDoUsuario() != null) return RedirectToAction("Index", "Home");
 

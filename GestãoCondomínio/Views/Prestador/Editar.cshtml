@@ -11,17 +11,17 @@
 <form asp-controller="Prestador" asp-action="Editar">
     <input  type="hidden" asp-for="Id"/>
     <div class="Form-Container">
-        <label for="nome">Nome</label>
+        <label for="Nome">Nome</label>
         <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome ">
         @Html.ValidationMessageFor(x => x.Nome)
     
     
-        <label for="Rg">RG</label>
+        <label for="RG">RG</label>
         <input type="text" asp-for="RG" class="form-control" placeholder="Digite o RG ">
         @Html.ValidationMessageFor(x => x.RG)
     
     
-        <label for="cpf">CPF</label>
+        <label for="CPF">CPF</label>
         <input type="text" asp-for="CPF" class="form-control" placeholder="Digite o CPF">
         @Html.ValidationMessageFor(x => x.CPF)
     
@@ -29,10 +29,12 @@
         <label for="contato">Contato</label>
         <input type="text" asp-for="Contato" class="form-control" placeholder="Digite o telefone do prestador">
         @Html.ValidationMessageFor(x => x.Contato)
+       
     
-        <label for="empresa">Empresa</label>
+        <label for="Empresa">Empresa</label>
         <input type="text" asp-for="Empresa" class="form-control" placeholder="Digite o nome da empresa">
         @Html.ValidationMessageFor(x => x.Empresa)
+       
     </div>
     
 

@@ -44,20 +44,20 @@
             {
                 foreach (PrestadorModel prestador in Model)
                 {
-                    <tr>
-                        <th scope="row">@prestador.Id</th>
-                        <td>@prestador.Nome</td>
-                        <td>@prestador.RG</td>
-                        <td>@prestador.CPF</td>
-                        <td>@prestador.Contato</td>
-                        <td>@prestador.Empresa</td>
-                        <td>
-                            <div class="btn-group" role="group">
-                                <a role="button" class="btn btn-primary" asp-route-id="@prestador.Id" asp-controller="Prestador" asp-action="Editar"><i class="fa fa-edit"></i></a>
-                                <a role="button" class="btn btn-danger" asp-route-id="@prestador.Id" asp-controller="Prestador" asp-action="Apagar"><i class="fa fa-trash"></i></a>
-                            </div>
-                        </td>
-                    </tr>
+            <tr>
+                <th scope="row">@prestador.Id</th>
+                <td>@prestador.Nome</td>
+                <td>@prestador.RG</td>
+                <td>@prestador.CPF</td>
+                <td>@prestador.Contato</td>
+                <td>@prestador.Empresa</td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a role="button" class="btn btn-primary" asp-route-id="@prestador.Id" asp-controller="Prestador" asp-action="Editar"><i class="fa fa-edit"></i></a>
+                        <a role="button" class="btn btn-danger" asp-route-id="@prestador.Id" asp-controller="Prestador" asp-action="Apagar"><i class="fa fa-trash"></i></a>
+                    </div>
+                </td>
+            </tr>
                 }
             }
         </tbody>

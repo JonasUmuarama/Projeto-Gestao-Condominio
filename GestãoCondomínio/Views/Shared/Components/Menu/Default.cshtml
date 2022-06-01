@@ -27,15 +27,37 @@
                     <a class="dropdown-item" asp-area="" asp-controller="Funcionario" asp-action="">Funcionários</a>
                 </div>
             </li>
+
             <li class="nav-item">
                 <a class="nav-link text-light" asp-area="" asp-controller="Acesso" asp-action="">Acessos</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
+            </li>
+
         }
 
+        @if (Model.Perfil == GestãoCondomínio.Enums.PerfilEnum.Funcionario)
+        {
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="Acesso" asp-action="">Acessos</a>
+            </li>
 
-        <li class="nav-item">
-            <a class="nav-link text-light" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
-        </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
+            </li>
+        }
+        @if (Model.Perfil == GestãoCondomínio.Enums.PerfilEnum.Morador)
+        {
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="AcessoMorador" asp-action="">Acessos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" asp-area="" asp-controller="Login" asp-action="Sair">Sair</a>
+            </li>
+
+
+        }
 
 
     </ul>

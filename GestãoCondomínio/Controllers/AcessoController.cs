@@ -11,10 +11,12 @@ namespace GestãoCondomínio.Controllers
     public class AcessoController : Controller
     {
         private readonly IAcessoRepositorio _acessoRepositorio;
+       
 
         public AcessoController(IAcessoRepositorio acessoRepositorio)
         {
             _acessoRepositorio = acessoRepositorio;
+           
         }
         public IActionResult Index()
         {
@@ -23,8 +25,9 @@ namespace GestãoCondomínio.Controllers
             return View(acessos);    
         }
 
-        public IActionResult Cadastrar()
+        public IActionResult Cadastrar()        
         {
+       
             return View();
         }
         public IActionResult Editar(int id)
