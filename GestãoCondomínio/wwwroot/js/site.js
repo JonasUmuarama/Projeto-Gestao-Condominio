@@ -11,6 +11,7 @@ $(document).ready(function () {
     getDatatable('#table-prestadores');
     getDatatable('#table-visitantes');
     getDatatable('#table-acessos');
+    getDatatable('#table-acessosMoradores');
     get.DataTable('#table-acessos-Inicio');
 })
 

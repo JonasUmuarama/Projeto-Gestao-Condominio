@@ -7,6 +7,8 @@
     <h3>Realmente deseja apagar o prestador (@Model.Nome)?</h3>
 
 </div>
+<div class="text-md-center">
+    <a class="btn btn-primary" role="button" asp-controller="Morador" asp-action="Index">Cancelar exclusão</a>
+    <a class="btn btn-danger" asp-controller="Prestador" asp-action="Deletar" asp-route-id="@Model.Id" role="button">Confirmar exclusão</a>
 
-<a class="btn btn-primary" role="button"asp-controller="Morador" asp-action="Index">Cancelar exclusão</a>
-<a class="btn btn-danger"asp-controller="Prestador" asp-action="Deletar" asp-route-id="@Model.Id" role="button">Confirmar exclusão</a>
+</div>

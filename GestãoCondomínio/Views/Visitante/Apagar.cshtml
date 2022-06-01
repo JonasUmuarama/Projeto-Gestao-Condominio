@@ -7,6 +7,8 @@
     <h3>Realmente deseja apagar o visitante (@Model.Nome)?</h3>
 
 </div>
+<div class="text-md-center">
 
-<a class="btn btn-primary" role="button"asp-controller="Visitante" asp-action="Index">Cancelar exclusão</a>
-<a class="btn btn-danger"asp-controller="Visitante" asp-action="Deletar" asp-route-id="@Model.Id" role="button">Confirmar exclusão</a>
+    <a class="btn btn-primary" role="button" asp-controller="Visitante" asp-action="Index">Cancelar exclusão</a>
+    <a class="btn btn-danger" asp-controller="Visitante" asp-action="Deletar" asp-route-id="@Model.Id" role="button">Confirmar exclusão</a>
+</div>
