@@ -8,8 +8,8 @@
 
 </div>
 
-<form asp-controller="Veiculo" asp-action="Editar">
-    <input  type="hidden" asp-for="Id"/>
+<form asp-controller="Veiculo" asp-action="Editar" class="Form-Container">
+    <input type="hidden" asp-for="Id" />
     <div class="form-group">
         <label for="nome">Placa</label>
         <input type="text" asp-for="Placa" class="form-control" placeholder="Digite a placa do veículo">
@@ -36,6 +36,7 @@
         @Html.ValidationMessageFor(x => x.Tipo)
     </div>
 
+    <br />
     <button type="submit" class="btn btn-primary">Editar</button>
     <a class="btn btn-secondary" asp-controller="Veiculo" asp-action="Index" role="button">Voltar</a>
 </form>

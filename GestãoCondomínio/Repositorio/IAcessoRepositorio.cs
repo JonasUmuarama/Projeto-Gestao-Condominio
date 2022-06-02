@@ -13,7 +13,7 @@ namespace GestãoCondomínio.Repositorio
         AcessoModel Adicionar(AcessoModel acesso);
         AcessoModel Atualizar(AcessoModel acesso);
         bool Deletar(int id);
-
+       
     }
 
 

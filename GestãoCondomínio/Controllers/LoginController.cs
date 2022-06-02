@@ -26,6 +26,10 @@ namespace GestãoCondomínio.Controllers
 
             return View();
         }
+        public IActionResult RedefinirSenha()
+        {
+            return View();
+        }
 
         public IActionResult Sair()
         {

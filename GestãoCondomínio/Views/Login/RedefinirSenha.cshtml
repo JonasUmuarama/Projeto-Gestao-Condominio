@@ -29,10 +29,7 @@
                     <input asp-for="Senha" class="form-control " id="senha" type="email" placeholder="E-mail">
                     @Html.ValidationMessageFor(x => x.Senha)
                 </div>
-                <br />
-                <br />
                 <input type="submit" value="Redefinir Senha" class="btn btn-primary btn-lg btn-block">
-                <br />
                 <a class="btn btn-secondary btn-block" asp-action="Index" asp-controller="Login" role="button">Voltar</a>
             </fieldset>
         </form>
