@@ -27,7 +27,9 @@ namespace GestãoCondomínio.Services
             {
                 result = result.Where(x => x.Saida <= maxDate.Value);
             }
-            return result.ToList();
+            return result
+                .OrderByDescending(x=>x.Entrada)
+                .ToList();
  
                
         }
