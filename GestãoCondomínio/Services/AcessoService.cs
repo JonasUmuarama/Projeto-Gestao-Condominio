@@ -25,11 +25,11 @@ namespace GestãoCondomínio.Services
 
             if (maxDate.HasValue)
             {
-                result = result.Where(x => x.Entrada <= maxDate.Value);
+                result = result.Where(x => x.Saida <= maxDate.Value);
             }
-            return result
-                .OrderByDescending(x => x.Entrada)
-                .ToList();
+            return result.ToList();
+ 
+               
         }
     }
 }
