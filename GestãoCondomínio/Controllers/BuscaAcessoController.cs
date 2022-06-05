@@ -30,7 +30,8 @@ namespace GestãoCondomínio.Controllers
 
         public IActionResult BuscaAcesso(DateTime? minDate, DateTime? maxDate)
         {
-            var result = _acessoService.FindByDate(minDate, maxDate);
+ 
+            var result = _acessoService.FindByDate(minDate,maxDate);
 
             return View(result);
         }
