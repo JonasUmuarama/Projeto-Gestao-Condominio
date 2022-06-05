@@ -8,9 +8,9 @@
 
 </div>
 
-<form asp-controller="Acesso" asp-action="Editar" class="Form-Container">
+<form asp-controller="Acesso" asp-action="Editar" >
     <input  type="hidden" asp-for="Id"/>
-    <div class="form-group">
+    <div class="Form-Container">
         <label for="veiculo">Veículo</label>
         <input type="text" asp-for="Veiculo" class="form-control">
         @Html.ValidationMessageFor(x => x.Veiculo)
@@ -36,6 +36,7 @@
         @Html.ValidationMessageFor(x => x.Destino)
 
     </div>
+    <br />
     <button type="submit" class="btn btn-primary">Editar</button>
     <a class="btn btn-secondary" asp-controller="Acesso" asp-action="Index" role="button">Voltar</a>
 </form>

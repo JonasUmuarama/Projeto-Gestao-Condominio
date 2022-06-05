@@ -5,17 +5,20 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GestãoCondomínio.Services;
 
 namespace GestãoCondomínio.Controllers
 {
     public class AcessoController : Controller
     {
         private readonly IAcessoRepositorio _acessoRepositorio;
+        private readonly AcessoService _acessoService;
        
 
-        public AcessoController(IAcessoRepositorio acessoRepositorio)
+        public AcessoController(IAcessoRepositorio acessoRepositorio, AcessoService acessoService)
         {
             _acessoRepositorio = acessoRepositorio;
+            _acessoService = acessoService;
            
         }
         public IActionResult Index()
@@ -23,6 +26,13 @@ namespace GestãoCondomínio.Controllers
             List<AcessoModel> acessos = _acessoRepositorio.BuscarTodos();
 
             return View(acessos);    
+        }
+
+        public IActionResult SimpleSearch(DateTime?minDate,DateTime? maxDate)
+        {
+            var result = _acessoService.FindByDate(minDate, maxDate);
+
+            return View();
         }
 
         public IActionResult Cadastrar()        

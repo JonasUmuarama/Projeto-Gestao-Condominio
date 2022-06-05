@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GestãoCondomínio.Services;
 
 namespace GestãoCondomínio
 {
@@ -39,6 +40,7 @@ namespace GestãoCondomínio
             services.AddScoped<IPrestadorRepositorio,PrestadorRepositorio>();
             services.AddScoped<IVisitanteRepositorio,VisitanteRepositorio>();
             services.AddScoped<IAcessoRepositorio,AcessoRepositorio>();
+            services.AddScoped<AcessoService>();
             services.AddScoped<ISessao, Sessao>();
 
             services.AddSession(o =>
